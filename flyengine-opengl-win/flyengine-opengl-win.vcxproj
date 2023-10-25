@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{f81da3fe-8364-42b2-9de4-68c377bdbe56}</ProjectGuid>
+    <RootNamespace>flyengineopenglwin</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)/flyengine-opengl-win/imgui;$(ProjectDir)/flyengine-opengl-win/imgui/backends;$(ProjectDir)/flyengine-opengl-win/flyengine-opengl;$(ProjectDir)/flyengine-opengl-win;$(ProjectDir)/flyengine-opengl-win/glfw-3.3.8.bin.WIN64/include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)/flyengine-opengl-win/glfw-3.3.8.bin.WIN64/lib-vc2022</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);glfw3.lib;glfw3dll.lib;opengl32.lib;glu32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Engine.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\main.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Modeling\Model.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Modeling\Scene.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Pipelines\ComputePipeline.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Pipelines\RenderPipeline.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Schemes\PlayScheme.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Schemes\Scheme.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Schemes\SchemeController.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Schemes\ViewScheme.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Stages\PlayStage.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Stages\Stage.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Stages\Stage1.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Stages\Stage2.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Utils\Basis.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Utils\Normals.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Utils\Utils.cpp" />
+    <ClCompile Include="flyengine-opengl-win\flyengine-opengl\Utils\Vec.cpp" />
+    <ClCompile Include="flyengine-opengl-win\imgui\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="flyengine-opengl-win\imgui\backends\imgui_impl_opengl2.cpp" />
+    <ClCompile Include="flyengine-opengl-win\imgui\imgui.cpp" />
+    <ClCompile Include="flyengine-opengl-win\imgui\imgui_draw.cpp" />
+    <ClCompile Include="flyengine-opengl-win\imgui\imgui_tables.cpp" />
+    <ClCompile Include="flyengine-opengl-win\imgui\imgui_widgets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Camera.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Engine.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\KeyPresses.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Modeling\Model.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Modeling\Scene.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Pipelines\ComputePipeline.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Pipelines\RenderPipeline.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Schemes\PlayScheme.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Schemes\Scheme.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Schemes\SchemeController.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Schemes\ViewScheme.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Stages\PlayStage.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Stages\Stage.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Stages\Stage1.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Stages\Stage2.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Utils\Basis.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Utils\Normals.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Utils\Utils.h" />
+    <ClInclude Include="flyengine-opengl-win\flyengine-opengl\Utils\Vec.h" />
+    <ClInclude Include="flyengine-opengl-win\GLFW\glfw3.h" />
+    <ClInclude Include="flyengine-opengl-win\GLFW\glfw3native.h" />
+    <ClInclude Include="flyengine-opengl-win\imgui\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="flyengine-opengl-win\imgui\backends\imgui_impl_opengl2.h" />
+    <ClInclude Include="flyengine-opengl-win\imgui\imconfig.h" />
+    <ClInclude Include="flyengine-opengl-win\imgui\imgui.h" />
+    <ClInclude Include="flyengine-opengl-win\imgui\imgui_internal.h" />
+    <ClInclude Include="flyengine-opengl-win\imgui\imstb_rectpack.h" />
+    <ClInclude Include="flyengine-opengl-win\imgui\imstb_textedit.h" />
+    <ClInclude Include="flyengine-opengl-win\imgui\imstb_truetype.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
